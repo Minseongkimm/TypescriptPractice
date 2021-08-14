@@ -1,10 +1,7 @@
 "use strict";
 //classes
 var Invoice = /** @class */ (function () {
-    function Invoice(c, d, a) {
-        this.client = c;
-        this.details = d;
-        this.amount = a;
+    function Invoice(client, details, amount) {
     }
     Invoice.prototype.format = function () {
         return this.client + " owes $" + this.amount + " for " + this.details;
@@ -16,7 +13,6 @@ var invTwo = new Invoice('luigi', 'work on the app', 300);
 var invoices = [];
 invoices.push(invOne);
 invoices.push(invTwo);
-console.log(invoices);
 var form = document.querySelector('.new-item-form'); //클래스로 가져옴//
 //inputs
 var type = document.querySelector('#type');
